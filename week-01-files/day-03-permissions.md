@@ -40,5 +40,6 @@
   - sudo apt update
 
   конфигурация хранится в /etc/sudoers и файлах в /etc/sudoers.d/. нельзя редактировать /etc/sudoers напрямую, нужно использовать sudo visudo
+
   пример строки для выдачи полных прав kicha ALL=(ALL:ALL) ALL
 
