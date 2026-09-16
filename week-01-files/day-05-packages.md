@@ -20,4 +20,25 @@
   - --no-upgrade - не обновлять, если пакет уже установлен.
   - --only-upgrade - только обновить, если пакет уже установлен. новый не ставить.
  
-- /dpkg - 
+- /dpkg - это низкоуровневый инструмент для управления пакетами. работает в связке с apt, вернее apt "вызывает" его для непосредственной установки пакетов.
+
+  основные команды dpkg:
+
+  - dpkg -i package.deb - установка локального deb файла
+  - dpkg -r package - удалить пакет, но оставить конфиги
+  - dpkg -P package - удалить пакет вместе с конфигами
+  - dpkg -l - список установленных пакетов
+  - dpkg --configure -a - настроить все недонастроенные пакеты
+  - dpkg -s package - показать статус и информацию о пакете
+  - dpkg -c package.deb - посмотреть содержимое deb бз установки
+ 
+- Репозиторий - это хранилище пакетов,организованное так чтобы пакетный менеджер мог автоматически находить скачивать и устанавливать нужное ПО.
+
+  Существует классический формат репозитория (одна строка): deb http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
+
+  Современный формат (DEB822), который имеет расширение .sources:  
+  Types: deb  
+  URIs: http://archive.ubuntu.com/ubuntu/   
+  Suites: jammy  
+  Components: main restricted universe multiverse  
+  Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg   
