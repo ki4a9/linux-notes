@@ -34,7 +34,8 @@
  
 - Репозиторий - это хранилище пакетов,организованное так чтобы пакетный менеджер мог автоматически находить скачивать и устанавливать нужное ПО.
 
-  Существует классический формат репозитория (одна строка): deb http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
+  Существует классический формат репозитория (одна строка):  
+   deb http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
 
   Современный формат (DEB822), который имеет расширение .sources:  
   Types: deb  
@@ -42,3 +43,6 @@
   Suites: jammy  
   Components: main restricted universe multiverse  
   Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg   
+
+
+  файлы лежат в /etc/apt/sources.list.d/*.sources
