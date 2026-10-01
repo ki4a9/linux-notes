@@ -17,4 +17,11 @@
   - sudo mkfs.ext4 -L MYDATA /dev/sdb1 - подписать диск(задать метку)
 - mount - монтирует диски и каталоги к точку монтирования(выбранной папке в линукс)
   - sudo mount /dev/sdb1 /mnt/data - монтируем sdb1 в папку data
-  
+  - sudo mount -t ext4 /dev/sdb1 /mnt/data - указать тип при монтировании
+  - sudo mount -o loop ubuntu.iso /mnt/iso - монтировать iso образ
+  - mount - посмотреть все смонтированные файловые системы
+  - sudo umount /mnt/data или - sudo umount /dev/sdb1 - размонтировать sdb1
+- /etc/fstab - mount работает до перезагрузки, чтобы разделы автоматически монтировались во время загрузки системы их нужно прописать в fstab
+   - <устройство>  <точка_монтирования>  <тип_ФС>  <опции>  <dump>  <pass>  - формат строки
+   - UUID=abc123-def456  /mnt/data  ext4  defaults  0  2 - пример монтирования
+   - sudo mount -a - проверить синтаксис файла на ошибки 
