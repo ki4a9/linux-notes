@@ -11,5 +11,11 @@ RAID
   - cat /proc/mdstat - проверка состояния массивов
   -  sudo mdadm --detail /dev/md0 - это тоже проверка, только подробная и конкретного
   -  Созданный массив можно использовать как обычный диск
+  -  sudo mdadm --detail --scan | sudo tee -a /etc/mdadm/mdadm.conf - сохранение конфигурации массива, чтобы он собирался при загрузке системы
+  -  sudo update-initramfs -u  - обновление файловой системы, чтобы увидеть наш рэйд
+  -  sudo mdadm --remove /dev/md0 /dev/sdc - удалить диск(сбойный)
+  -  sudo mdadm --add /dev/md0 /dev/sdc - добавить новый(вернуть старый)
+  -  sudo mdadm --stop /dev/md0 - остановить массив
+  -  sudo mdadm --assemble /dev/md0 - собрать обратно
     
   
