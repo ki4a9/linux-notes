@@ -20,4 +20,7 @@
    
   <img width="385" height="115" alt="image" src="https://github.com/user-attachments/assets/7b2be0ea-6c26-4b42-a210-f58a1d8a302e" />
 
-- rsync -   
+- rsync - синхронизация файлов, умеет копировать только изменения в файлах
+  - rsync -av источник назначение - базовый синтаксис
+  - rsync -avh /home/kicha/docs/ /backup/docs/ - локальный бэкап
+  - rsync -avzhP /home/kicha/docs/ user@server:/backup/docs/ - бекап по ssh
