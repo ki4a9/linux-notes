@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: admin
-      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_PASSWORD: password
       POSTGRES_DB: mydb
     volumes:
       - pg_data:/var/lib/postgresql/data
