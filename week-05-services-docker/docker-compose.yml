@@ -1,0 +1,38 @@
+services:
+  # --- База данных ---
+  db:
+    image: postgres:16
+    container_name: lab-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: mydb
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    networks:
+      - lab-net
+    # Порт наружу не пробрасываем — БД не должна быть доступна извне
+
+  # --- Веб-сервер ---
+  web:
+    image: nginx:latest
+    container_name: lab-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
+    networks:
+      - lab-net
+    depends_on:
+      - db
+
+# --- Именованные тома ---
+volumes:
+  pg_data:
+
+# --- Сети ---
+networks:
+  lab-net:
+    driver: bridge
