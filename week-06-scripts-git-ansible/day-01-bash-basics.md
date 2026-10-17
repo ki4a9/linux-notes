@@ -41,7 +41,12 @@ bash основы
   <img width="425" height="444" alt="image" src="https://github.com/user-attachments/assets/c6201699-cbf0-4b09-9416-e1530e7c3f63" />
   
    - Логические операторы  
-      <img width="395" height="323" alt="image" src="https://github.com/user-attachments/assets/3c9a2752-8090-4635-96f1-16f76fed70fa" />
+   <img width="395" height="323" alt="image" src="https://github.com/user-attachments/assets/3c9a2752-8090-4635-96f1-16f76fed70fa" />
+- Циклы -
+  - For - перебор значений
+  - While - пока условие верно
+  - until - пока условие не станет верным
+  - break и continue - 
 
      
   
