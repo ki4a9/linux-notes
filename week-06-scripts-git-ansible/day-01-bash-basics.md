@@ -15,7 +15,7 @@ bash основы
     - $? - код возврата последней команды(успех=0)
     - $$ - PID текущего процесса
     - $USER, $HOME, $PATH - имя пользователя, домашний каталог, пусть исполняемых файлов
- - Условия -
+- Условия -
    - if/elif/else (критично важно следить за пробелами внутри скобок)    
    <img width="321" height="192" alt="image" src="https://github.com/user-attachments/assets/e5ade781-b69e-4d25-8610-9e09256f6841" />
 
@@ -39,8 +39,24 @@ bash основы
      - -w - доступен для записи
      - -x - исполняемый  
   <img width="425" height="444" alt="image" src="https://github.com/user-attachments/assets/c6201699-cbf0-4b09-9416-e1530e7c3f63" />
- 
-      
+  
+   - Логические операторы  
+      <img width="395" height="323" alt="image" src="https://github.com/user-attachments/assets/3c9a2752-8090-4635-96f1-16f76fed70fa" />
+
+     
+  
+
+
+
+
+
+
+
+   
+  
+
+
+    
    
 
     
